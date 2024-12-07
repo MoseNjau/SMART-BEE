@@ -119,9 +119,9 @@ export default {
   position: absolute;
   width: 20px;
   height: 20px;
-  background-image: url($ASSETS+'/img/icons/icn_bee_dark.svg');
+  background-image: url('/img/icons/icn_beep_small.png');
   &.bee--light {
-    background-image: url($ASSETS+'/img/icons/icn_bee.svg');
+    background-image: url('/img/icons/icn_beep_small.png');
   }
 }
 #bee1 {

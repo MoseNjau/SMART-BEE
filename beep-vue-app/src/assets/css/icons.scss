@@ -60,11 +60,11 @@
   }
 
   &-queen {
-    background-image: url($ASSETS+'/img/icons/icn_bee.svg');
+    background-image: url( '/img/icons/icn_beep_base_small.png');
     background-size: 10px;
 
     &.dark {
-      background-image: url($ASSETS+'/img/icons/icn_bee_dark.svg');
+      background-image: url('/img/icons/icn_beep_base_small.png');
       border: 1px solid $color-grey-dark !important;
     }
   }
@@ -73,7 +73,7 @@
     width: 41px;
     height: 28px;
     background-color: transparent;
-    background-image: url('~@assets/img/icons/icn_beep_base_small.png');
+    background-image: url('/img/icons/icn_beep_base_small.png');
     background-size: contain;
     border: 0;
   }
@@ -85,7 +85,7 @@
 
   &-queen--no-outline {
     background-color: transparent;
-    background-image: url($ASSETS+'/img/icons/icn_bee_dark.svg');
+    background-image: url('/img/icons/icn_beep_base_small.png');
     background-size: 17px;
     border: none;
     border-radius: 0;
@@ -206,7 +206,7 @@
   }
 
   &-sound {
-    background-image: url($ASSETS+'/img/icons/icn_bee.svg');
+    background-image: url('/img/icons/icn_beep_base_small.png');
     background-size: 20px;
     border: none;
     border-radius: 0;

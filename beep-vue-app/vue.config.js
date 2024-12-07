@@ -1,6 +1,9 @@
 // const fs = require('fs')
 const appConfig = require('./public/manifest')
 process.env.VUE_APP_VERSION = require('./package.json').version
+publicPath: process.env.VUE_APP_ASSETS_URL || '/',
+
+
 
 /** @type import('@vue/cli-service').ProjectOptions */
 module.exports = {
@@ -28,14 +31,24 @@ module.exports = {
     )
   },
   css: {
-    // Enable CSS source maps. Disable for production build!
     sourceMap: false,
     loaderOptions: {
       scss: {
-        prependData: `$ASSETS: '${process.env.VUE_APP_ASSETS_URL}'; @import "~@assets/css/mixins.scss"; @import "~@assets/css/variables.scss"; @import "~@assets/css/main.scss"; @import "~@assets/css/icons.scss"; @import "~@assets/css/typography.scss"; @import "~@assets/css/grid.scss"; @import "~@assets/css/vendors.scss"; @import "~@assets/css/print.scss";`,
+        prependData: `
+        $ASSETS: '${process.env.VUE_APP_ASSETS_URL || '/src/assets'}';
+          @import "~@assets/css/mixins.scss";
+          @import "~@assets/css/variables.scss";
+          @import "~@assets/css/main.scss";
+          @import "~@assets/css/icons.scss";
+          @import "~@assets/css/typography.scss";
+          @import "~@assets/css/grid.scss";
+          @import "~@assets/css/vendors.scss";
+          @import "~@assets/css/print.scss";
+        `,
       },
     },
   },
+  
   // Configure Webpack's dev server.
   // https://cli.vuejs.org/guide/cli-service.html
   devServer: {
@@ -47,3 +60,6 @@ module.exports = {
   },
   publicPath: '/',
 }
+console.log('Loaded ENV variables:', process.env);
+
+
